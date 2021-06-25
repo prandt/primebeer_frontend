@@ -10,7 +10,7 @@
                         <div class="col-md-6">
                             <mat-form-field class="example-full-width">
                                 <input matInput placeholder="Digite o nome da cerveja" type="text"
-                                    [(ngModel)]="cerveja.name" name="nome">
+                                    [(ngModel)]="cerveja.name" name="nome" validate>
                             </mat-form-field>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                         <div class="col-md-6">
                             <mat-form-field class="example-full-width">
                                 <input matInput placeholder="Digite o preço da cerveja" type="number"
-                                    [(ngModel)]="cerveja.price" name="preco">
+                                    [(ngModel)]="cerveja.price" name="preco" validate>
                             </mat-form-field>
                         </div>
                     </div>
