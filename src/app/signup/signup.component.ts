@@ -29,7 +29,9 @@ export class SignupComponent implements OnInit {
 
   save(){
     this.usuario.birthDate = formatDate(this.dataFormatada, 'dd/MM/yyyy HH:mm', 'en-US')
-    this.usuarioService.save(this.usuario).subscribe()   
+    this.usuarioService.save(this.usuario).subscribe(
+      result =>  this.router.navigate(['/login'])
+    )   
   }
   update(){
     this.usuarioService.update(this.usuario, this.usuario.id).subscribe()   
@@ -49,9 +51,6 @@ export class SignupComponent implements OnInit {
           this.usuario.city = x.addresses[0].city
           this.usuario.telefone1 = x.phoneNumbers[0]
           this.usuario.birthDate = x.birthDate
-          y => {
-            this.router.navigate([''])
-          }
         }
       )
     } 
