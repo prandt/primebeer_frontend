@@ -12,59 +12,59 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <mat-form-field class="example-full-width">
-                                      <input matInput placeholder="Nome completo" [(ngModel)]="usuario.name" name="nome">
+                                      <input matInput placeholder="Nome completo" [(ngModel)]="usuario.name" name="nome" required>
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
                                     <mat-form-field class="example-full-width">
-                                      <input matInput placeholder="Endereço de e-mail" type="email" [(ngModel)]="usuario.email" name="email">
+                                      <input matInput placeholder="Endereço de e-mail" type="email" [(ngModel)]="usuario.email" name="email" required>
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Senha" type="password" [(ngModel)]="usuario.password" name="senha">
+                                    <input matInput placeholder="Senha" type="password" [(ngModel)]="usuario.password" name="senha" required>
                                   </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-8" *ngIf='!isMinhaConta()'>
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Data de nascimento" type="date" [(ngModel)]="dataFormatada" name="dataNascimento" >
+                                    <input matInput placeholder="Data de nascimento" type="date" [(ngModel)]="dataFormatada" name="dataNascimento" required>
                                   </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Endereço" type="text" [(ngModel)]="usuario.street" name="street">
+                                    <input matInput placeholder="Endereço" type="text" [(ngModel)]="usuario.street" name="street" required>
                                   </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Cidade" type="text" [(ngModel)]="usuario.city" name="city">
+                                    <input matInput placeholder="Cidade" type="text" [(ngModel)]="usuario.city" name="city" required>
                                   </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Estado" type="text" [(ngModel)]="usuario.state" name="state">
+                                    <input matInput placeholder="Estado" type="text" [(ngModel)]="usuario.state" name="state" required>
                                   </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="CEP" type="text" [(ngModel)]="usuario.postalCode" name="postalCode">
+                                    <input matInput placeholder="CEP" type="text" [(ngModel)]="usuario.postalCode" name="postalCode" required>
                                   </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Telefone" type="text" [(ngModel)]="usuario.telefone1" name="telefone1">
+                                    <input matInput placeholder="Telefone" type="text" [(ngModel)]="usuario.telefone1" name="telefone1" required>
                                   </mat-form-field>
                                 </div>
                             </div>
