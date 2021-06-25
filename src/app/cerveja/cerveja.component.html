@@ -1,0 +1,32 @@
+<div class="main-content">
+    <form class="navbar-form">
+        <div class="input-group no-border">
+            <input type="text" value="" class="form-control" placeholder="Pesquisar cerveja...">
+            <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="teste()">
+                <i class="material-icons">search</i>
+                <div class="ripple-container"></div>
+            </button>
+        </div>
+    </form>
+    <table class="table table-hover">
+        <thead class="text-warning">
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Tipo da cerveja</th>
+            <th>Preço</th>
+            <th>Teor Alcoólico</th>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let c of cervejas">
+                    <td># {{c.id}}</td>
+                    <td>{{c.name}}</td>
+                    <td>{{c.typeBeer.type}}</td>
+                    <td>R$ {{c.price}}</td>
+                    <td>{{c.teorAlcool}} %</td>
+                    <td><button mat-raised-button type="submit" class="btn btn-success pull-right"
+                            (click)="details(c.id)">Mais Detalhes</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

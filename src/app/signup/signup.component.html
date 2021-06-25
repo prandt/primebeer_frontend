@@ -1,0 +1,87 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Crie uma conta</h4>
+                        <!--<p class="card-category">Complete your profile</p>-->
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Nome completo" [(ngModel)]="usuario.name" name="nome">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Endereço de e-mail" type="email" [(ngModel)]="usuario.email" name="email">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Senha" type="password" [(ngModel)]="usuario.password" name="senha">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8" *ngIf='!isMinhaConta()'>
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Data de nascimento" type="date" [(ngModel)]="dataFormatada" name="dataNascimento" >
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Endereço" type="text" [(ngModel)]="usuario.street" name="street">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Cidade" type="text" [(ngModel)]="usuario.city" name="city">
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Estado" type="text" [(ngModel)]="usuario.state" name="state">
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="CEP" type="text" [(ngModel)]="usuario.postalCode" name="postalCode">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Telefone" type="text" [(ngModel)]="usuario.telefone1" name="telefone1">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div *ngIf="isMinhaConta();else elseBlock">
+                              <button mat-raised-button type="submit" class="btn btn-success pull-left" (click)="update()">Atualizar conta</button>
+                            </div>
+                            <ng-template #elseBlock>
+                              <button mat-raised-button type="submit" class="btn btn-success pull-left" (click)="save()">Criar conta</button>
+                            </ng-template>
+                            
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-left" [routerLink]="['']">Cancelar</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

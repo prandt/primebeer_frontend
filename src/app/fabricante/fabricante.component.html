@@ -1,0 +1,15 @@
+<div class="main-content">
+    <button mat-raised-button type="submit" class="btn btn-success pull-left" (click)="novo()">Novo</button>
+    <table class="table table-hover">
+        <thead class="text-warning">
+            <th>ID</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of fabricantes">
+                <td>{{items.id}}</td>
+                <td>{{items.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

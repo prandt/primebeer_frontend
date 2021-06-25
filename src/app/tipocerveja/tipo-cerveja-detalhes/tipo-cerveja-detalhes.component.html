@@ -1,0 +1,22 @@
+<div class="main-content">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header card-header-warning">
+                <h4 class="card-title">Cadastrar novo tipo de cerveja</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Digite o tipo da cerveja" type="text"  [(ngModel)]="tipoCerverja.type" name="nome">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <button mat-raised-button type="submit" class="btn btn-success pull-left" (click)="save()">Salvar</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

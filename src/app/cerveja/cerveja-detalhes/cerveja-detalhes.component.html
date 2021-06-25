@@ -1,0 +1,42 @@
+<div class="main-content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-8 col-md-12">
+                  <div class="card">
+                        <div class="card-header card-header-tabs card-header-primary">
+                            <h3 class="card-title">>> {{cerveja.name}}</h3>
+                            <p class="card-category">Código: {{cerveja.id}}</p>
+                        </div>
+                        <div class="card-body">
+                            <img mat-card-sm-image src="{{photo}}" height="200" width="">
+                            <br>
+                            <h5>Detalhes</h5>
+                            <h6>Teor alcoólico: {{cerveja.teorAlcool}} %</h6>
+                            <h6>Coloração: {{cerveja.coloring}}</h6>
+                            <h6>Tipo da cerveja: {{typeBeer.type}}</h6>
+                            <h6>Volume: {{volume.volume}}</h6>
+                            <h6>Fabricante: {{fabricante.name}}</h6>
+                            <h6>Informações adicionais: {{cerveja.addtionalInformation}}</h6>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                  <div class="card">
+                      <div class="card-header card-header-warning">
+                          <h4 class="card-title">Detalhes</h4>
+                      </div>
+                      <div class="card-body">
+                            <h2><i class="material-icons">storefront</i> R$ {{cerveja.price}}</h2>
+                            <h6>Quantidade disponível | {{cerveja.amount}}</h6>
+                        <button mat-raised-button type="submit" class="btn btn-warning" (click)="addToCart()">
+                            <i class="material-icons">add_shopping_cart</i>
+                            Adicionar ao carrinho
+                        </button>
+                        <button mat-raised-button type="submit" class="btn btn-success" (click)="comprar()">Comprar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    

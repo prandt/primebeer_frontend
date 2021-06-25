@@ -1,0 +1,95 @@
+<div class="main-content">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header card-header-warning">
+                <h4 class="card-title">Cadastrar nova cerveja</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite o nome da cerveja" type="text"
+                                    [(ngModel)]="cerveja.name" name="nome">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite o preço da cerveja" type="number"
+                                    [(ngModel)]="cerveja.price" name="preco">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite o teor alcoólico" type="number"
+                                    [(ngModel)]="cerveja.teorAlcool" name="teor">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite a coloração da cerveja" type="text"
+                                    [(ngModel)]="cerveja.coloring" name="coloring">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite as informações adicionais da cerveja"
+                                    type="textarea" [(ngModel)]="cerveja.addtionalInformation" name="addinf">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite a quantidade disponivel" type="number"
+                                    [(ngModel)]="cerveja.amount" name="amount">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite o id do volume" type="number"
+                                    [(ngModel)]="cerveja.volumeId" name="volume">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite o id do tipo da cerveja" type="number"
+                                    [(ngModel)]="cerveja.typeBeerId" name="typebeer">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Digite o id do tipo do fabricante" type="number"
+                                    [(ngModel)]="cerveja.manufactureId" name="manufacturer">
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Upload file</label>
+                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+                        </div>
+                    </div>
+                    <button mat-raised-button type="submit" class="btn btn-success pull-left"
+                        (click)="save()">Salvar</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

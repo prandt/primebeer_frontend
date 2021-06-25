@@ -1,0 +1,71 @@
+<div class="main-content">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">people</i>
+                    </div>
+                    <h3 class="card-title">Usuários</h3>
+                </div>
+                <div class="card-footer">
+                    <button mat-raised-button class="btn btn-danger pull-right">Gerenciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">sports_bar</i>
+                    </div>
+                    <h3 class="card-title">Cervejas</h3>
+                </div>
+                <div class="card-footer">
+                    <button mat-raised-button class="btn btn-danger pull-right">Gerenciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">local_drink</i>
+                    </div>
+                    <h3 class="card-title">Tipos de Cervejas</h3>
+                </div>
+                <div class="card-footer">
+                    <button mat-raised-button class="btn btn-danger pull-right" (click)="toGerenciarTipoCerveja()">Gerenciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">local_bar</i>
+                    </div>
+                    <h3 class="card-title">Volume</h3>
+                </div>
+                <div class="card-footer">
+                    <button mat-raised-button class="btn btn-danger pull-right" (click)="toGerenciarVolume()">Gerenciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">people</i>
+                    </div>
+                    <h3 class="card-title">Fabricantes</h3>
+                </div>
+                <div class="card-footer">
+                    <button mat-raised-button class="btn btn-danger pull-right" [routerLink]="['/admin/fabricante']">Gerenciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

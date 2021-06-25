@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="card">
+        <div class="card-header card-header-success">
+            <h4 class="card-title ">Carrinho de compras</h4>
+            <p class="card-category">É um prazer ter você como cliente</p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-warning">
+                        <th>Código</th>
+                        <th>Nome da cerveja</th>
+                        <th>Valor da cerveja</th>
+                    </thead>
+                    <tbody *ngFor="let obj of pedido.items">
+                        <tr>
+                            <td>{{obj.beer.id}}</td>
+                            <td>{{obj.beer.name}}</td>
+                            <td>R$ {{obj.beer.price}}</td>
+                            <td> <button mat-raised-button type="button" matTooltip="Remover cerveja"
+                                    [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon" (click)="removerItem(obj.beer.id)">
+                                    <i class="material-icons">close</i>
+                                </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header card-header-success">
+            <h4 class="card-title ">Confirmação da compra</h4>
+        </div>
+        <div class="card-body">
+            <h4>Valor total: R$ {{getTotal()}}</h4>
+            <button mat-raised-button class="btn-small btn-success" (click)="save()">Comprar</button>
+        </div>
+    </div>
+</div>
