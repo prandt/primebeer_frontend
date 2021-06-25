@@ -12,22 +12,24 @@ export class CervejaComponent implements OnInit {
 
   cervejas: CervejaModel[]
   tiposCerveja: any[]
-  conteudo: any
+  cervejaNome: string = ""
 
   constructor(private service: CervejaService, private router: Router) {
 
    }
 
   ngOnInit(): void {
-    this.list()
+    this.find("")
   }
-  list() {
-    this.service.find().subscribe(x => this.cervejas = x['content'])
+  find(name: string) {
+    if(name == "" || name == null){
+      this.service.find().subscribe(objts => this.cervejas = objts)
+    }else {
+      this.service.findByName(name).subscribe(objts => this.cervejas = objts)
+    }
+    
   }
-  
-  teste(){
-   console.log(this.cervejas)
-  }
+
   details(id: number){
     this.router.navigate(['cervejas/'+id])
   }

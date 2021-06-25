@@ -22,8 +22,11 @@ export class CervejaService {
     };
     return this.http.post<CervejaModel>(api_url, cerveja, options)
   }
-  find():Observable<any>{
-    return this.http.get<any>(api_url+"/page")
+  find():Observable<any[]>{
+    return this.http.get<any[]>(api_url)
+  }
+  findByName(name: string):Observable<any[]>{
+    return this.http.get<any[]>(api_url+"/name/"+name)
   }
   findById(id: number): Observable<CervejaModel>{
     return this.http.get<CervejaModel>(api_url+"/"+id)
